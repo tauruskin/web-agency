@@ -1,0 +1,187 @@
+.payments {
+  .button {
+    margin: 0 auto;
+  }
+
+  &.layout {
+
+    @include tablet {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .card {
+    position: relative;
+    max-width: 1240px;
+    margin: 0 auto;
+    background-color: $black-bg;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+
+    &::before {
+      @include background-texture;
+      background-image: url("../img/texture.png");
+      opacity: 0.5;
+    }
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 30px 18px 30px;
+      border-bottom: 2px solid $black-classic;
+
+      @include mobile {
+        padding: 10px;
+      }
+    }
+
+    &__item {
+      max-width: 228px;
+      width: 100%;
+      position: relative;
+
+      @include mobile {
+        margin-right: 10px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.active {
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: -18px;
+          left: 0;
+          background-color: $green-default;
+          border-radius: 2px;
+
+          @include mobile {
+            bottom: -12px;
+          }
+        }
+      }
+
+      &--variant {
+        @include fs17;
+        color: $light-grey;
+        margin-bottom: 7px;
+        cursor: pointer;
+
+        @include mobile {
+          text-align: center;
+        }
+      }
+
+      &--title {
+        @include fs23;
+
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+
+    &__content {
+      display: none;
+      position: relative;
+      overflow: hidden;
+
+      @include mobile {
+        flex-direction: column;
+      }
+
+      &.active {
+        display: flex;
+
+      }
+
+      &--background {
+        @include background-gradient;
+        width: 431px;
+        height: 431px;
+        left: -91px;
+        top: 295px;
+      }
+
+      .left-block {
+        position: relative;
+        overflow: hidden;
+        padding-right: 119px;
+        padding-top: 60px;
+        @include adaptiv-value("padding-top", 60, 20, 0);
+
+        @include mobile {
+          padding-left: 0;
+          padding-right: 0;
+          margin-right: auto;
+          margin-left: auto;
+        }
+        @media (max-width: 540px) {
+          margin-left: 0;
+        }
+        &__image {
+          width: 417px;
+          height: auto;
+          margin-left: 99px;
+          margin-bottom: 73px;
+          @include adaptiv-value("width", 417, 100, 0);
+          @include adaptiv-value("margin-left", 99, 10, 0);
+          @include adaptiv-value("margin-bottom", 73, 10, 0);
+        }
+      }
+
+      .right-block {
+        max-width: 497px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px;
+        @include adaptiv-value("padding-top", 60, 10, 0);
+
+        @include mobile {
+          padding-left: 15px;
+          padding-right: 15px;
+          margin: 0 auto;
+          z-index: 1;
+        }
+
+        &__title {
+          @include fs30;
+          margin-bottom: 20px;
+        }
+
+        &__text {
+          @include fs17;
+          margin-bottom: 20px;
+        }
+
+        &__title-accent {
+          @include fs23;
+          color: $green-default;
+        }
+
+        &__subtitle {
+          @include fs15;
+          font-weight: 500;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          color: $light-grey;
+        }
+
+        .button {
+          margin: 20px auto 20px 0px;
+        }
+      }
+    }
+  }
+
+  .heading__subtitle {
+    margin-top: 24px;
+  }
+}

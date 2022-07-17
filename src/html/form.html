@@ -1,0 +1,64 @@
+<div id="form_layout" class="form layout">
+    <div class="form__background"></div>
+    <div class="form__left-block left-block">
+        <div class="left-block__image">
+            <img class="" src="img/form/3dman.png" alt="3dman">
+        </div>
+        <div class="form__roll-images roll-images">
+            <img class="roll-images--left" src="img/form/roll-left.png" width="155" alt="roll">
+            <img class="roll-images--right" src="img/form/roll-right.png" width="136" alt="roll">
+        </div>
+    </div>
+    <div class="form__right-block right-block">
+        <form action="#" id="form" class="form__body">
+            @@include('components/heading.html', {
+            "title_text": "Let's get started!",
+            "subtitle_text": "What kind of project would you like to start with us?"
+            })
+            <div class="form__item-wrap">
+                <div class="form__item">
+                    <label for="formName" class="form__label">Your Name</label>
+                    <input id="formName" type="text" name="name" class="form__input _req" placeholder="Joe Dou">
+                    <small>Error Message</small>
+                </div>
+                <div class="form__item">
+                    <label for="formTel" class="form__label">Phone number</label>
+                    <input id="formTel" type="tel" name="tel" class="form__input _req" placeholder="+38(__)__ __ _">
+                    <small>Error Message</small>
+                </div>
+            </div>
+            <div class="form__item-wrap">
+                <div class="form__item">
+                    <label for="formEmail" class="form__label">E-Mail</label>
+                    <input id="formEmail" type="text" name="email" class="form__input _req _email"
+                           placeholder="yourcompany@email.com">
+                    <small>Error Message</small>
+                </div>
+            </div>
+            <div class="form__item-wrap">
+                <div class="form__item">
+                    <label for="formMessage" class="form__label">Write a message</label>
+                    <textarea name="message" id="formMessage" class="form__input"
+                              placeholder="Your message here"></textarea>
+                    <small>Error Message</small>
+                </div>
+            </div>
+            <button id="submit-btn" class="button popup-link" type="submit">Send</button>
+<!--            <p><a href="#popup-success-form" class="popup-link">© Copyright - 2022 Web agency</a></p>-->
+
+            <div id="popup-success-form" class="popup">
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <a href="#header" class="popup__close close-popup">
+                            <img src="img/ico-close.svg" width="22px" height="22px" alt="close icon">
+                        </a>
+                        <div class="popup__content--wrap">
+                            <h2 class="popup__title">Your request has been sent!</h2>
+                            <p class="popup__text">We will contact you as soon as possible.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,98 @@
+<div id="payments" class="payments layout">
+    @@include('components/image-blocks-animated.html', {})
+
+    @@include('components/heading.html', {
+    "title_text": "Payment Möglichkeiten ",
+    "subtitle_text": "Ihr Projekt - Ihre Regeln!"
+    })
+    <div class="payments__card card">
+        <ul id="card-tabs" class="card__header">
+            <li id="variant1" class="card__item active">
+                <p class="card__item--variant">Variant 01</p>
+                <h3 class="card__item--title">Einsteigerangebot </h3>
+            </li>
+            <li id="variant2" class="card__item">
+                <p class="card__item--variant">Variant 02</p>
+                <h3 class="card__item--title">Festpreis</h3>
+            </li>
+            <li id="variant3" class="card__item">
+                <p class="card__item--variant">Variant 03</p>
+                <h3 class="card__item--title">Kooperationsmodell</h3>
+            </li>
+            <li id="variant4" class="card__item">
+                <p class="card__item--variant">Variant 04</p>
+                <h3 class="card__item--title">Mietkauf</h3>
+            </li>
+        </ul>
+        <div id="content1" class="card__content active">
+            <div class="card__content--background"></div>
+            <div class="card__content--left-block left-block">
+                <img src="img/payment/einsteigerangebot.png" alt="einsteigerangebot" class="left-block__image">
+            </div>
+            <div class="card__content--right-block right-block">
+                <h2 class="right-block__title">Einsteigerangebot</h2>
+                <p class="right-block__text">Ein einfacher Shop für kleines Geld? Geht! Mit uns gehen Sie schnell und
+                    sicher online. Wir sind an deiner Seite und entwickeln in kürzester Zeit den passenden Shop für Ihr
+                    Projekt!</p>
+                <h2 class="right-block__title-accent">ab 14 Tagen</h2>
+                <p class="right-block__subtitle">basis online shop</p>
+
+                @@include('components/button.html', {
+                "button_title": "Anfragen"
+                })
+            </div>
+        </div>
+        <div id="content2" class="card__content">
+            <div class="card__content--background"></div>
+            <div class="card__content--left-block left-block">
+                <img src="img/payment/festpreis.png" alt="" class="left-block__image">
+            </div>
+            <div class="card__content--right-block right-block">
+                <h2 class="right-block__title">Festpreis</h2>
+                <p class="right-block__text">Wir bieten keine Dumpingpreise an und treiben dann den Aufwand in die Höhe,
+                    sondern wir arbeiten grundsätzlich auf Festpreis Basis. So ist vor Projektstart klar was getan
+                    werden soll und wieviel es kosten wird.</p>
+                <h2 class="right-block__title-accent">from 2K Euro</h2>
+                <p class="right-block__subtitle">basis online shop</p>
+
+                @@include('components/button.html', {
+                "button_title": "Anfragen"
+                })
+            </div>
+        </div>
+        <div id="content3" class="card__content">
+            <div class="card__content--background"></div>
+            <div class="card__content--left-block left-block">
+                <img src="img/payment/kooperationsmodell.png" alt="" class="left-block__image">
+            </div>
+            <div class="card__content--right-block right-block">
+                <h2 class="right-block__title">Kooperationsmodell</h2>
+                <p class="right-block__text">Sie brauchen einen Partner der einige Bereiche übernehmen kann? Lasset uns
+                    sprechen!
+                </p>
+                <h2 class="right-block__title-accent">Entwicklung und andere Vollzeitdienste</h2>
+
+                @@include('components/button.html', {
+                "button_title": "Anfragen"
+                })
+            </div>
+        </div>
+        <div id="content4" class="card__content">
+            <div class="card__content--background"></div>
+            <div class="card__content--left-block left-block">
+                <img src="img/payment/mietkauf.png" alt="" class="left-block__image">
+            </div>
+            <div class="card__content--right-block right-block">
+                <h2 class="right-block__title">Mietkauf</h2>
+                <p class="right-block__text">Sie möchten Ihr Cash Flow in Blick behalten? Verständlich!
+                </p>
+                <h2 class="right-block__title-accent">für 2 bis 10 Zahlungen</h2>
+                <p class="right-block__subtitle">basis online shop</p>
+
+                @@include('components/button.html', {
+                "button_title": "Anfragen"
+                })
+            </div>
+        </div>
+    </div>
+</div>

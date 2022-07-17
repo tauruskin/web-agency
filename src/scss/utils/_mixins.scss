@@ -1,0 +1,114 @@
+@mixin btn-link {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 23px;
+  color: $white;
+  border-radius: 100px;
+  transition: background-color 0.3s ease 0s;
+}
+
+@mixin fs15 {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 24px;
+  @include adaptiv-value("font-size", 15, 12, 0);
+  @include adaptiv-value("line-height", 24, 20, 0);
+}
+
+@mixin fs17 {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 24px;
+  @include adaptiv-value("font-size", 17, 14, 0);
+  @include adaptiv-value("line-height", 24, 20, 0);
+}
+
+@mixin fs23 {
+  font-weight: 300;
+  font-size: 23px;
+  line-height: 28px;
+  @include adaptiv-value("font-size", 23, 16, 0);
+  @include adaptiv-value("line-height", 28, 24, 0);
+}
+
+@mixin fs30 {
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 38px;
+  @include adaptiv-value("font-size", 30, 18, 0);
+  @include adaptiv-value("line-height", 30, 26, 0);
+}
+
+@mixin fs48 {
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 53px;
+  @include adaptiv-value("font-size", 48, 22, 0);
+  @include adaptiv-value("line-height", 48, 34, 0);
+}
+
+@mixin background-gradient {
+  position: absolute;
+  width: 482px;
+  height: 482px;
+  background: linear-gradient(180deg, #54E17F 0%, #18756F 100%);
+  filter: blur(200px);
+  @include adaptiv-value("width", 482, 200, 0);
+  @include adaptiv-value("height", 482, 200, 0);
+}
+
+@mixin background-texture {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+$maxWidth: 1920;
+$maxWidthContainer: 1370;
+
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+  $addSize: $startSize - $minSize;
+  @if $type==1 {
+    //Only if size less then container
+    #{$property}: $startSize + px;
+    @media (max-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+    }
+  } @else if $type==2 {
+    //Only if size bigger then container
+    #{$property}: $startSize + px;
+    @media (min-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+    }
+  } @else {
+    //Always (all sizes)
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+  }
+}

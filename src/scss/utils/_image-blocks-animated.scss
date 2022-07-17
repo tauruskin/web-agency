@@ -1,0 +1,31 @@
+
+.image-blocks-animated {
+  width: 210px;
+  display: flex;
+  justify-content: space-between;
+  margin: 60px auto 0;
+  @include adaptiv-value("margin-top", 60, 40, 0);
+
+  &__wrap {
+    position: relative;
+    display: flex;
+    width: 50px;
+    height: 60px;
+  }
+
+  &__item {
+    position: absolute;
+    pointer-events: none;
+    height: 42px;
+    width: 42px;
+    z-index: 1;
+    top: 0px;
+    animation: moveCubes 1.5s infinite ease-in-out;
+    animation-direction: normal;
+    animation-direction: alternate-reverse;
+
+    &.item_middle {
+      animation-direction: alternate;
+    }
+  }
+}

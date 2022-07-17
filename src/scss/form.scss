@@ -1,0 +1,213 @@
+.form {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+  &.layout {
+    //padding-bottom: 0;
+  }
+  &__background {
+    @include background-gradient;
+    left: -26px;
+    top: 7px;
+  }
+
+  .left-block {
+    //position: relative;
+    display: flex;
+    justify-content: center;
+    width: 502px;
+    margin: 0px 92px 0px 90px;
+
+      @media (max-width: 990px) {
+        display: none;
+      }
+    &__image {
+      max-width: 216px;
+      max-height: 622px;
+
+
+      img {
+        position: relative;
+        width: 100%;
+        z-index: 10;
+      }
+    }
+
+    .roll-images {
+      &--left {
+        width: 155px;
+        height: 143px;
+        left: 99px;
+        top: 326px;
+        animation: moveRollFormLeft 1.5s infinite ease-in-out;
+        animation-direction: alternate-reverse;
+      }
+
+      &--right {
+        width: 136px;
+        height: 119px;
+        left: 465px;
+        top: 216px;
+        animation: moveRollFormRight 1.5s infinite ease-in-out;
+        animation-direction: alternate-reverse;
+      }
+    }
+  }
+
+  .right-block {
+    margin-left: 0;
+    @media (max-width: 1199px) {
+      margin-right: 15px;
+    }
+    @media (max-width: 990px) {
+      margin: 0 auto;
+      z-index: 1;
+    }
+    .heading {
+      &__title {
+        margin-top: 0;
+      }
+
+      &__subtitle {
+        text-align: left;
+      }
+    }
+
+    .form__body {
+      max-width: 606px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .heading {
+        @media (max-width: 768px) {
+          padding: 0 15px;
+        }
+      }
+      .form__item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        &-wrap {
+          width: 100%;
+          display: flex;
+          gap: 30px;
+          justify-content: space-between;
+          margin-bottom: 31px;
+
+          @media (max-width: 768px) {
+            flex-direction: column;
+            padding: 0 15px;
+          }
+        }
+
+        .form__label {
+          @include fs15;
+          font-family: 'Inter', sans-serif;
+          color: $light-grey;
+          margin-bottom: 5px;
+        }
+
+        .form__input {
+          @include fs15;
+          font-family: 'Inter', sans-serif;
+          height: 59px;
+          min-width: 288px;
+          width: 100%;
+          padding: 18px;
+          border-radius: 6px;
+          outline: none;
+
+          @media (max-width: 768px) {
+            min-width: 100%;
+          }
+
+          &._error {
+            background: #FEE8E8;
+          }
+        }
+
+        #formMessage {
+          min-height: 132px;
+        }
+
+        ::-webkit-input-placeholder {
+          color: $light-grey;
+        }
+
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+          color: $light-grey;
+        }
+
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+          color: $light-grey;
+        }
+
+        :-ms-input-placeholder { /* Internet Explorer 10+ */
+          color: $light-grey;
+        }
+
+        textarea {
+          resize: none;
+        }
+        &.success input,
+        &.success textarea {
+          background-color: $success-bg;
+        }
+        &.error input,
+        &.error textarea {
+          background-color: $error-bg;
+        }
+        small {
+          color: $error-text;
+          position: absolute;
+          bottom: -17px;
+          left: 0;
+          visibility: hidden;
+        }
+        &.error small {
+          visibility: visible;
+        }
+      }
+
+      .button {
+        display: inline-block;
+        @include fs17;
+        color: $white;
+        border-radius: 100px;
+        padding: 17.5px 110px;
+        transition: background-color 0.3s ease 0s;
+        &:hover {
+          cursor: pointer;
+          background-color: $green-hover;
+        }
+
+        @media (max-width: 768px) {
+          margin: 0 auto;
+        }
+      }
+
+    }
+  }
+  .popup {
+    &__content {
+      max-width: 726px;
+      width: 100%;
+    }
+    &__close {
+      border: none;
+      padding: 0;
+      width: 22px;
+      height: 22px;
+
+      &:hover,
+      &:focus {
+        background: none;
+      }
+    }
+  }
+}

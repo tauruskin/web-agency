@@ -1,0 +1,129 @@
+
+
+//Обнуление
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html, body {
+  height: 100%;
+  line-height: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/button";
+@import "utils/keyframes";
+@import "utils/image-blocks-animated";
+@import "utils/roll-images";
+@import "utils/popup";
+
+@import "hero";
+@import "header";
+@import "projects";
+@import "services";
+@import "payments";
+@import "team";
+@import "form";
+@import "footer";
+@import "cookies-policy";
+@import "404";
+
+body {
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+  background-color: $black-bg;
+  color: $white;
+
+  &._lock {
+    overflow: hidden;
+  }
+
+  span {
+    color: blue;
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+[class*="__container"] {
+  max-width: 1370px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 15px;
+}
+
+.heading {
+  &__title {
+    @include fs48;
+    color: $white;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  &__subtitle {
+    @include fs17;
+    text-align: center;
+    color: $light-grey;
+    margin: 20px 0 40px 0;
+  }
+}
+
+.layout {
+  position: relative;
+  background-color: $black-classic;
+  border-radius: 20px;
+  padding-bottom: 80px;
+  @include adaptiv-value("padding-bottom", 80, 40, 0);
+  z-index: 1;
+  overflow: hidden;
+
+  &::before {
+    @include background-texture;
+    background-image: url("../img/texture.png");
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}

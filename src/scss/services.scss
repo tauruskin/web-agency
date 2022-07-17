@@ -1,0 +1,99 @@
+.services {
+  padding-bottom: 80px;
+
+  .heading__subtitle {
+    max-width: 453px;
+    margin: 20px auto 60px;
+    @media (max-width: 440px) {
+      padding: 0 15px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 31px;
+    padding-bottom: 36px;
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+      //max-width: 768px;
+      @include adaptiv-value("max-width", 900, 768, 0);
+      width: 100%;
+      margin: 0 auto;
+      justify-content: space-between;
+      gap: unset;
+    }
+  }
+
+  &__item {
+    @media (min-width: 768px) and (max-width: 1279px) {
+      width: calc((100% - 15px) / 2);
+    }
+    @include tablet {
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+    }
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+
+    @media (max-width: 440px) {
+      width: auto;
+      padding: 0 15px;
+    }
+
+    &--number {
+      margin-right: 7px;
+      @include fs17;
+      color: $light-grey;
+    }
+
+    &--wrap {
+      display: flex;
+      align-items: flex-start;
+      padding: 20px;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      transition: all 0.3s ease 0s;
+
+      &:hover, &:focus {
+        border: 2px solid #383838;
+      }
+    }
+
+    &--header {
+      display: flex;
+    }
+  }
+
+  .item-content {
+    display: flex;
+    flex-direction: column;
+    margin-right: 6px;
+
+    &__title {
+      @include fs17;
+      font-weight: 500;
+      color: $white;
+      margin-bottom: 20px;
+
+      @media (max-width: 600px) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &__text {
+      @include fs15;
+      color: $light-grey;
+      margin-left: 32px;
+      max-width: 235px;
+    }
+  }
+
+  .button {
+    margin: 0 auto;
+  }
+}

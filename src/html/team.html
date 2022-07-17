@@ -1,0 +1,30 @@
+<div id="team" class="team layout">
+    @@include('components/image-blocks-animated.html', {})
+
+    <div class="heading">
+        <h1 class="heading__title">Unser Team</h1>
+        <p class="heading__subtitle">Die Wortfügung wurde gebildet aus dem lateinischen do‌lōrem (Schmerz) und ipsum
+            (selbst) aus dem mehrbändigen Werk "De finibus bonorum et malorum", Liber Primus, (erster Absatz, Zeile 32)
+            des römischen Philosophen, Politikers und Schriftstellers Cicero. Der Text ist weder nach Wortwahl oder
+            Schreibung nach echtes Latein, die meisten Worte gibt es gar nicht, das gilt auch für "Lorem". Einige
+            Fragmente erinnern jedoch deutlich an Zeilen aus o. g. Text, z. B. an den Absatz "Neque porro quisquam est,
+            qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit." </p>
+    </div>
+    <div class="team__image">
+        <a href="#popup-image" class="popup-link">
+            <img src="img/team.png"  alt="team picture">
+        </a>
+    </div>
+
+    <div id="popup-image" class="popup">
+        <div class="popup__body">
+            <div class="popup__content popup__content_image">
+                <a href="#header" class="popup__close close-popup"><img src="img/ico-close.svg" alt="close icon"></a>
+                <div class="popup__image">
+                    <img src="img/team.png"  alt="team picture">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

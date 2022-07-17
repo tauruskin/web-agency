@@ -1,0 +1,39 @@
+.cookie-policy {
+  padding: 80px 50px;
+
+  &__main-title {
+    @include fs48;
+    text-align: center;
+  }
+
+  .policy-content {
+    max-width: 818px;
+    margin: 0 auto;
+
+     & > p {
+        @include fs17;
+        color: $light-grey;
+        margin: 20px 0;
+        //white-space: pre-line;
+      }
+
+    h2 {
+      margin-top: 60px;
+      @include fs30;
+    }
+
+    ol, ul {
+      margin: 20px 0;
+      color: $light-grey;
+      @include fs17;
+    }
+
+    ol > li {
+      list-style: disc inside;
+    }
+
+    ul > li {
+      list-style: decimal inside;
+    }
+  }
+}

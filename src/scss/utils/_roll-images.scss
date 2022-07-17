@@ -1,0 +1,22 @@
+
+.roll-images {
+  z-index: 1;
+  //hero images
+  &--left {
+    position: absolute;
+    animation: moveRollHeroLeft 1.5s infinite ease-in-out;
+    animation-direction: normal;
+    animation-direction: alternate-reverse;
+  }
+
+  &--right {
+    position: absolute;
+    animation: moveRollHeroRight 1.5s infinite ease-in-out;
+    animation-direction: normal;
+    animation-direction: alternate-reverse;
+  }
+
+  @media (max-width: 1199px) {
+    display: none;
+  }
+}

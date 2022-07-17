@@ -1,0 +1,40 @@
+@keyframes moveRollHeroLeft {
+  from {
+    top: 15%;
+  }
+  to {
+    top: 18%;
+  }
+}
+@keyframes moveRollHeroRight {
+   from {
+     top: 45%;
+   }
+   to {
+     top: 48%;
+   }
+ }
+@keyframes moveRollFormLeft {
+  from {
+    top: 38%;
+  }
+  to {
+    top: 41%;
+  }
+}
+@keyframes moveRollFormRight {
+   from {
+     top: 23%;
+   }
+   to {
+     top: 26%;
+   }
+ }
+@keyframes moveCubes {
+  from {
+    top: 5%;
+  }
+  to {
+    top: 55%;
+  }
+}

@@ -1,0 +1,43 @@
+.error-page {
+  padding: 121px 95px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__title {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 280px;
+    line-height: 280px;
+    -webkit-text-stroke: 2px $green-default;
+    -webkit-text-fill-color: transparent;
+    text-stroke: 2px $green-default;
+    margin-bottom: 30px;
+    text-align: center;
+
+  }
+
+  &__subtitle {
+    @include fs48;
+    color: $green-default;
+    margin-bottom: 50px;
+    text-align: center;
+    white-space: pre;
+  }
+
+  &__image {
+    padding-bottom: 62px;
+    max-width: 550px;
+    @include adaptiv-value("max-width", 550, 280, 0);
+
+  }
+
+  .button {
+    &__link {
+      padding: 18px 120px;
+      @include adaptiv-value("padding-right", 120, 90, 0);
+      @include adaptiv-value("padding-left", 120, 90, 0);
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.team {
+  padding: 0 50px;
+  @include adaptiv-value("padding-left", 50, 15, 0);
+  @include adaptiv-value("padding-right", 50, 15, 0);
+
+  .button {
+    margin: 0 auto;
+  }
+
+  .heading {
+    max-width: 814px;
+    margin: 0 auto;
+
+    &__subtitle {
+      margin-top: 34px;
+    }
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    max-width: 1240px;
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+}

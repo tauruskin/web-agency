@@ -1,0 +1,28 @@
+
+<header class="header">
+    <div class="header__wrap">
+        <a href="index.html" class="header__logo">
+            <img src="img/webagency.svg" alt="logo">
+        </a>
+        <div class="header__menu menu">
+            <div class="menu__icon">
+                <span></span>
+            </div>
+            <nav class="menu__body">
+                <ul class="menu__list">
+                    <li class="menu__item"><a data-goto="#projects" href="#" class="menu__link">Projects</a></li>
+                    <li class="menu__item"><a data-goto="#services" href="#" class="menu__link">Services</a></li>
+                    <li class="menu__item"><a data-goto="#payments" href="#" class="menu__link">Payments</a></li>
+                    <li class="menu__item"><a data-goto="#team" href="#" class="menu__link">Our team</a></li>
+                </ul>
+            </nav>
+        </div>
+<!--        <button class="button">-->
+<!--            <a href="#" data-goto="#form_layout" class="button__link menu__link">Anfragen</a>-->
+<!--        </button>-->
+    @@include('components/button.html', {
+    "button_title": "Get started"
+    })
+    </div>
+
+</header>

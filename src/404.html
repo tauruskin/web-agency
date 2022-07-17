@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+@@include('html/head.html', {
+"title": "404"
+})
+<body>
+<div class="wrapper">
+    @@include('html/header.html',{})
+    <main class="main">
+        <div class="main__container">
+            <div class="error-page layout">
+                <!--                <h1 class="error-page__title">404</h1>-->
+                <div class="">
+                    <img class="error-page__image" src="img/404.svg" alt="404">
+                    <h2 class="error-page__subtitle">Page not found</h2>
+
+                </div>
+                <button class="button">
+                    <a href="index.html" class="button__link">Home page</a>
+                </button>
+            </div>
+        </div>
+    </main>
+    @@include('html/footer.html',{})
+</div>
+</body>
+</html>
