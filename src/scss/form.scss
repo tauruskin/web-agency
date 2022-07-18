@@ -16,49 +16,61 @@
     //position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 502px;
     margin: 0px 92px 0px 90px;
 
-      @media (max-width: 990px) {
+      @media (max-width: 1199px) {
         display: none;
       }
+      @media (min-width: 1600px) {
+        width: 50%;
+      }
     &__image {
-      max-width: 216px;
-      max-height: 622px;
-
+      width: 100%;
+      height: auto;
+      position: relative;
 
       img {
         position: relative;
         width: 100%;
+        height: auto;
         z-index: 10;
       }
+      .roll-images {
+        img {
+          position: absolute;
+        }
+        &--left {
+          width: 15%;
+          height: auto;
+          left: 8%;
+          top: 326px;
+          animation: moveRollFormLeft 1.5s infinite ease-in-out;
+          animation-direction: alternate-reverse;
+        }
+
+        &--right {
+          width: 15%;
+          height: auto;
+          right: 0;
+          top: 216px;
+          animation: moveRollFormRight 1.5s infinite ease-in-out;
+          animation-direction: alternate-reverse;
+        }
+      }
     }
 
-    .roll-images {
-      &--left {
-        width: 155px;
-        height: 143px;
-        left: 99px;
-        top: 326px;
-        animation: moveRollFormLeft 1.5s infinite ease-in-out;
-        animation-direction: alternate-reverse;
-      }
-
-      &--right {
-        width: 136px;
-        height: 119px;
-        left: 465px;
-        top: 216px;
-        animation: moveRollFormRight 1.5s infinite ease-in-out;
-        animation-direction: alternate-reverse;
-      }
-    }
   }
 
   .right-block {
     margin-left: 0;
+    @media (min-width: 1200px) {
+      padding: 0 15px;
+    }
     @media (max-width: 1199px) {
       margin-right: 15px;
+      width: 100%;
     }
     @media (max-width: 990px) {
       margin: 0 auto;
@@ -81,6 +93,9 @@
       flex-direction: column;
       align-items: flex-start;
 
+      @media (max-width: 1199px) {
+        max-width: 100%;
+      }
       .heading {
         @media (max-width: 768px) {
           padding: 0 15px;

@@ -17,18 +17,6 @@
     }
   }
 
-  .roll-images {
-    &--left {
-      top: 93px;
-      left: 585px;
-    }
-
-    &--right {
-      top: 288px;
-      right: 33px;
-    }
-  }
-
   .left-block {
     max-width: 505px;
     min-height: 335px;
@@ -39,11 +27,18 @@
     @media (max-width: 768px) {
       margin: 0 15px;
     }
+    @media (min-width: 1600px) {
+      max-width: 100%;
+      width: 50%;
+    }
 
     .heading__title {
       text-align: left;
       margin: 20px 0;
       line-height: 53px;
+      @media (min-width: 1600px) {
+        width: 80%;
+      }
     }
 
     span {
@@ -89,6 +84,19 @@
       img {
         width: 100%;
       }
+    }
+    .roll-images {
+      img {
+        width: 80px;
+      }
+      &--left {
+        top: 93px;
+        left: -65px;
+      }
+
+      &--right {
+        top: 288px;
+        right: 0px;}
     }
   }
 
