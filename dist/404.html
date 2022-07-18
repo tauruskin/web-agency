@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>404</title>
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="wrapper">
+    
+<header class="header">
+    <div class="header__wrap">
+        <a href="index.html" class="header__logo">
+            <img src="img/webagency.svg" alt="logo">
+        </a>
+        <div class="header__menu menu">
+            <div class="menu__icon">
+                <span></span>
+            </div>
+            <nav class="menu__body">
+                <ul class="menu__list">
+                    <li class="menu__item"><a data-goto="#projects" href="#" class="menu__link">Projects</a></li>
+                    <li class="menu__item"><a data-goto="#services" href="#" class="menu__link">Services</a></li>
+                    <li class="menu__item"><a data-goto="#payments" href="#" class="menu__link">Payments</a></li>
+                    <li class="menu__item"><a data-goto="#team" href="#" class="menu__link">Our team</a></li>
+                </ul>
+            </nav>
+        </div>
+<!--        <button class="button">-->
+<!--            <a href="#" data-goto="#form_layout" class="button__link menu__link">Anfragen</a>-->
+<!--        </button>-->
+    <button class="button">
+    <a href="#form_layout"  class="button__link">Get started</a>
+</button>
+    </div>
+
+</header>
+    <main class="main">
+        <div class="main__container">
+            <div class="error-page layout">
+                <!--                <h1 class="error-page__title">404</h1>-->
+                <div class="">
+                    <img class="error-page__image" src="img/404.svg" alt="404">
+                    <h2 class="error-page__subtitle">Page not found</h2>
+
+                </div>
+                <button class="button">
+                    <a href="index.html" class="button__link">Home page</a>
+                </button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+    <div class="footer__left-block">
+        <!--        <p>© Copyright - 2022 web agency</p>-->
+
+        <p><a href="#popup-cookies-policy" class="popup-link">© Copyright - 2022 web agency</a></p>
+        <ul class="footer__list">
+            <li class="footer__item">
+                <a class="footer__item--link" href="../cookies-policy.html">Cookie Policy</a>
+            </li>
+            <li class="footer__item">
+                <a class="footer__item--link" href="#">Privacy Notice</a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer__right-block">
+        <ul class="footer__list">
+            <li class="footer__item">
+                <a class="footer__item--link" href="mailto:info@tinkerbell.com">info@web-agency.com</a>
+            </li>
+            <li class="footer__item">
+                <a class="footer__item--link" href="tel:+380996015101">+38 099 601 51 01</a>
+            </li>
+        </ul>
+    </div>
+    <div id="popup-cookies-policy" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#header" class="popup__close close-popup">
+                    <img src="img/ico-close.svg" width="22px" height="22px" alt="close icon">
+                </a>
+                <div class="popup__content--wrap">
+                    <h2 class="popup__title">This website is using cookies</h2>
+                    <p class="popup__text close-popup">I agree</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</body>
+</html>
